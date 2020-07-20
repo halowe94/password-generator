@@ -1,9 +1,23 @@
 // Assignment Code
-var generationBtn = document.querySelector("#generate");
+//create variable for generate button
+let generationBtn = document.querySelector("#generate");
+//create variable for capital letters
+let uppercase = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+//create variable for lower case letters
+let lowercase = ("abcedefghijklmnopqrstuvwxyz")
+//creaate variable for numbers
+let numbers = ("1234567890")
+//creaate variable for symbols
+let symbols = ("!@#$%^&*()_+")
+//create variable for putting fx together
+let password = ("uppercaseFx" + "lowercaseFx" + "numbersFx" + "symbolsFx")
 
 // Write password to the #password input
+
 function writePassword() {
-    var password = generatePassword();
+    let password = generatePassword();
+    let passwordText = document.querySelector("#passcode");
+
 
     passwordText.value = password;
 }
@@ -13,7 +27,6 @@ generateBtn.addEventListener("click", writePassword);
 
 
 //PSEUDOCODE
-//create variable for generate button
 //create Event Listener to create succession of prompts 
 //Prompt: "Would you like capital letters?"
 //If true randomize capital letters with math.random()
