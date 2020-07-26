@@ -61,8 +61,8 @@ function writePassword() {
     }
 
     function genPassword() {
-             [Math.floor(Math.random()) * passwordLength]; {
-            append.charAt(symbolsToUse)
+             [(Math.random(symbolsToUse) * passLength) * Math.floor]; {
+            append.charAt(symbolsToUse);
              };
 }
         //make function to grab password and append it for X amount of times
