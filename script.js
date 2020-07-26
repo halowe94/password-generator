@@ -57,10 +57,13 @@ function writePassword() {
 
     if (8 <= passLength && passLength <= 128) {
         const allSymbols = symbolsToUse.split("")
-        for (let i = 0; i < passLength; i++){function genPassword()
-             [Math.floor(Math.random()) * passwordLength]; {
-            append.charAt(symbolsToUse);
+        //for (let i = 0; i < passLength; i++)};
     }
+
+    function genPassword() {
+             [Math.floor(Math.random()) * passwordLength]; {
+            append.charAt(symbolsToUse)
+             };
 }
         //make function to grab password and append it for X amount of times
 
