@@ -29,21 +29,21 @@ function writePassword() {
     let upperInput  = confirm("Would you like capital letters?");
         if (upperInput === true) {
             symbolsToUse += uppercase
-            console.log(symbolsToUse)
+            
         }
 
     //Prompt: "WOuld you like lower case letters?"
     let lowerInput = confirm("Would you like lower case letters?");
          if (lowerInput === true) {
             symbolsToUse += lowercase
-            console.log(symbolsToUse)
+        
         }
 
     //Prompt: "Would you like numbers?"
     let numbersInput = confirm("Would you like numbers?");
     if(numbersInput === true) {
         symbolsToUse += numbers
-            console.log(symbolsToUse)
+            
    }
 
    //Prompt: "WOuld you like symbols?"
@@ -51,26 +51,33 @@ function writePassword() {
     if(symbolsInput === true) {
         symbolsToUse += symbols
         console.log(symbolsToUse)
+        
    }
 
    let passLength = prompt("how long would you like you password to be? Choose a value between 8 and 128");
 
-    if (8 <= passLength && passLength <= 128) {
+    if (passLength >= 8 && passLength <= 128) {
         const allSymbols = symbolsToUse.split("")
+        console.log(allSymbols);
+
         //for (let i = 0; i < passLength; i++)};
     }
 
     function genPassword() {
-             [(Math.random(symbolsToUse) * passLength) * Math.floor]; {
-            append.charAt(symbolsToUse);
-             };
+        [(Math.random(allSymbols) * passLength) * Math.floor]; {
+        document.getElementById ("#password") = (allSymbols);
+        };
+
+    
+        
+
 }
         //make function to grab password and append it for X amount of times
 
 
    //create somewhere to store the characters
 
-    let passwordText = document.querySelector("#password");
+   let passwordText = document.querySelector("#password");
 
 
     passwordText.value = password;
