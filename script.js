@@ -1,6 +1,6 @@
 // Assignment Code
 //create variable for putting fx together
-let password = ("uppercaseFx" + "lowercaseFx" + "numbersFx" + "symbolsFx")
+let password = ""
 
 // Write password to the #password input
 
@@ -10,62 +10,73 @@ function writePassword() {
     //decision string based on prompt blocks
     //math.random
     //loop based on length
-    let password = generatePassword();
-    //create variable for generate button
-    let generationBtn = document.querySelector("#generate");
+    //let password = generatePassword();
+    
     //create variable for capital letters
     let uppercase = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
     //create variable for lower case letters
-    let lowercase = ("abcedefghijklmnopqrstuvwxyz")
+    let lowercase = ("abcedefghijklmnopqrstuvwxyz");
     //creaate variable for numbers
-    let numbers = ("1234567890")
+    let numbers = ("1234567890");
     //creaate variable for symbols
-    let symbols = ("!@#$%^&*()_+")
+    let symbols = ("!@#$%^&*()_+");
+    let symbolsToUse = "";
 
     // create variable for password length
-    let passLength = function passlength() {
     
-        let i = prompt("how long would you like you password to be? Choose a value between 8 and 128");
-
-        if (8 <= i <= 128) {
-            console.log(i);
-        }
-    }
 
     //Prompt: "Would you like capital letters?"
-    uppercase  = confrim("Would you like capital letters?");
-        if (uppercase === true) {
-            console.log("Math.floor(Math.random) * [i]")
+    let upperInput  = confirm("Would you like capital letters?");
+        if (upperInput === true) {
+            symbolsToUse += uppercase
+            console.log(symbolsToUse)
         }
 
     //Prompt: "WOuld you like lower case letters?"
-    let lowercase = prompt("Would you like lower case letters?");
-         if (lowercase === true) {
-             console.log("Math.floor(Math.random) * [i]")
+    let lowerInput = confirm("Would you like lower case letters?");
+         if (lowerInput === true) {
+            symbolsToUse += lowercase
+            console.log(symbolsToUse)
         }
 
     //Prompt: "Would you like numbers?"
-    let numbers = prompt("Would you like numbers?");
-    (numbers === true) {
-        console.log("Math.floor(Math.random) * [i]")
+    let numbersInput = confirm("Would you like numbers?");
+    if(numbersInput === true) {
+        symbolsToUse += numbers
+            console.log(symbolsToUse)
    }
 
    //Prompt: "WOuld you like symbols?"
-    let symbols = prompt("Woud you like symbols?");
-    (symbols === true) {
-        console.log("Math.floor(Math.random) * [i]")
+    let symbolsInput = confirm("Woud you like symbols?");
+    if(symbolsInput === true) {
+        symbolsToUse += symbols
+        console.log(symbolsToUse)
    }
+
+   let passLength = prompt("how long would you like you password to be? Choose a value between 8 and 128");
+
+    if (8 <= passLength && passLength <= 128) {
+        symbols = symbols.split("")
+        for (let i = 0; i < passLength; i++){function genPassword()
+             [Math.floor(Math.random()) * passwordLength]; {
+            append.charAt(symbolsToUse);
+    }
+}
+        //make function to grab password and append it for X amount of times
+
 
    //create somewhere to store the characters
 
-    let passwordText = document.querySelector("#passcode");
+    let passwordText = document.querySelector("#password");
 
 
     passwordText.value = password;
 }
 
+//create variable for generate button
+let generationBtn = document.querySelector("#generate");
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generationBtn.addEventListener("click", writePassword);
 
 
 //PSEUDOCODE
