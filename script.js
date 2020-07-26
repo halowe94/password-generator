@@ -56,7 +56,7 @@ function writePassword() {
    let passLength = prompt("how long would you like you password to be? Choose a value between 8 and 128");
 
     if (8 <= passLength && passLength <= 128) {
-        symbols = symbols.split("")
+        const allSymbols = symbolsToUse.split("")
         for (let i = 0; i < passLength; i++){function genPassword()
              [Math.floor(Math.random()) * passwordLength]; {
             append.charAt(symbolsToUse);
